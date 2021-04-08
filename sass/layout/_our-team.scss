@@ -1,13 +1,9 @@
 .team-container {
     display: flex;
     align-items: center;
-}
-.team-container {
-    display: flex;
-    align-items: center;
     margin-left: -30px;
 }
-.team-set {
+.team-container__set {
     margin-left: 30px;
     flex-basis: calc((100% - 120px)/4);
 }

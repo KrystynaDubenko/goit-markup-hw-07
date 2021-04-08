@@ -11,7 +11,7 @@
     font-style: normal;
     margin-top: 20px;
 }
-.marg {
+.list-all__marg {
     margin-bottom: 9px;
 }
 .logo-dark-theme {
@@ -51,7 +51,7 @@
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-.footer-icons-color {
+.footer-set__footer-icons-color {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,26 +62,28 @@
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-icons-list:not(:last-child) {
-    margin-right: 10px;
-} 
-
-.footer-icons {
-    fill: var(--standart-color);
+.footer-set__footer-icons-list {
+    &:not(:last-child) {
+        margin-right: 10px;
+    } 
 }
-.footer-icons-link:hover .footer-icons-color,
-.footer-icons-link:focus .footer-icons-color {
-    background-color: var(--focus-color);
+.footer-set__footer-icons {
+    fill: var(--standart-color);
 }
 .footer-icons-link:hover,
 .footer-icons-link:focus  {
     background-color: var(--focus-color);
+
+    &.footer-icons-color,
+    &.footer-icons-color {
+        background-color: var(--focus-color);
+}
 }
 .follow {
     margin-left: auto;
     width: 570px;
 }
-.reminder-follow {
+.follow__reminder {
     width: 219px;
     height: 16px;
     font-family: var(--main-font);
@@ -94,7 +96,7 @@
     color: var(--standart-color);
     margin-bottom: 20px;
 }
-.follow-wrapper {
+.follow__wrapper {
     position: relative;
     display: flex;
 }
@@ -108,7 +110,7 @@
     font-size: 16px;
     line-height: 1.25;
 }
-.mail-follower {
+.mail__follower {
     width: 358px;
     height: 50px;
     padding-left: 16px;
@@ -119,7 +121,7 @@
     background-color: var(--footer-bg-color);
     color: var(--standart-color);
 }
-.follow-btn {
+.follow__btn {
     position: relative;
     width: 200px;
     margin-left: 12px;
@@ -141,7 +143,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
-.follow-icon {
+.follow__icon {
     position: absolute;
     top: 50%;
     right: 28px;

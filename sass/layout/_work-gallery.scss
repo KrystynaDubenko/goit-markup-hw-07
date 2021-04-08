@@ -5,20 +5,17 @@
     align-items: center;
     margin-bottom: 50px;
 }
-.main-items {
+.main-set__items {
     margin-right: 8px;
     
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--focus-color);
+    }
 }
-.main-items:hover,
-.main-items:focus {
-    background-color: var(--focus-color);
-}
-.works-item:hover,
-.works-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.work-content-wrapper {
+.work-content {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 24px;
@@ -45,13 +42,15 @@
     border: none;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--focus-color );
+        color: var(--standart-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-    background-color: var(--focus-color );
-    color: var(--standart-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+
 .works-set {
     display: flex;
     flex-wrap: wrap;
@@ -61,11 +60,22 @@
     margin-top: -30px;
     margin-left: -30px;
 }
-.works-item {
+.works-set__item {
     margin-top: 30px;
     margin-left: 30px;
     flex-basis: calc((100% - 90px) / 3);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .overlay,
+    &:focus .overlay {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 .work1 {
     width: 100%;
@@ -113,7 +123,7 @@
     background: url(2910404.jpg);
 }
 
-.project-name {
+.work-content__name {
     font-family: var(--main-font);
     font-weight: bold;
     font-size: 18px;
@@ -122,7 +132,7 @@
     color:var(--main-text-color);
     margin-bottom: 4px;
 }
-.project-explanation {
+.work-content__explanation {
     font-family: var(--main-font);
     font-size: 16px;
     line-height: 1.87;
@@ -132,6 +142,12 @@
 .overlay-wrapper {
     position: relative;
     overflow: hidden;
+
+    &:hover .overlay,
+    &:focus .overlay {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 .overlay {
     position: absolute;
@@ -150,16 +166,4 @@
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-}
-
-.overlay-wrapper:hover .overlay,
-.overlay-wrapper:focus .overlay {
-    opacity: 1;
-    transform: translateY(0%);
-}
-
-.works-item:hover .overlay,
-.works-item:focus .overlay {
-    opacity: 1;
-    transform: translateY(0%);
 }
